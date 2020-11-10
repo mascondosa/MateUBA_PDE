@@ -51,3 +51,12 @@ def MatrizAInvertir_Implicito_Rectangulo(tamañoX, tamañoY, pasoX, pasoY, dt):
     matAInv = dt * matAInv
 
     return matAInv
+
+def MatricesCBPer2D( Nx,Ny ):
+    Dx2 = Tridiag([1,-2,1],Nx)
+    Dx2[0,-1] = 1 #condiciones periódicas
+    Dx2[-1,0] = 1
+    Dy2 = Tridiag([1,-2,1],Ny)
+    Dy2[0,-1] = 1 #condiciones periódicas
+    Dy2[-1,0] = 1
+    return Dx2,Dy2
