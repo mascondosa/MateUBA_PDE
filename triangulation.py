@@ -2,6 +2,10 @@ import dmsh
 
 
 class Triangulation:
+    """
+    Convierte las triangulaciones de dmsh en una clase para poder usarlas con el código
+    actual de minifemlib.py (agrega atributos points, simplices y neighbors)
+    """
     def __init__(self, points, cells):
         self.points = points
         self.simplices = cells
@@ -33,11 +37,18 @@ class Triangulation:
 
 
 def polygonTriangulation(borderPoints, edge_size):
+    """
+    De una lista de puntos de borde crea una triangulacion de tamaño edge_size
+    del poligono determinado por esos puntos
+    """
     points, cells = dmsh.generate(dmsh.Polygon(borderPoints), edge_size)
     return Triangulation(points, cells)
 
 
 def sartenTriangulation(size, edge_size):
+    """
+    Triangulación de silueta de una sartén de cocina
+    """
     c = dmsh.Circle([0, 0], size)
     r = dmsh.Rectangle(-2.5*size, -size*0.9, -size/8, size/8)
 
