@@ -9,3 +9,7 @@ Ecuación del calor:
 Ecuaciones de Reacción-Difusión:
 
 ![ReaccionDifusion](ReactDiff.png)
+
+Elementos Finitos (Laplaciano con borde Dirichlet homogéneo):
+
+![Sarten](sarten_laplace.png)
