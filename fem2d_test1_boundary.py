@@ -1,9 +1,13 @@
 import numpy as np
 import matplotlib.pyplot as plt
+import triangulation
 import minifemlib as fem
 
 # Evaluamos la geometría        
 T = fem.rect_mesh([0,1],[0,1],11,11)
+
+# Test para la Sartén 
+# ~ T = triangulation.sartenTriangulation(2,0.1)
 
 boundary = fem.Boundary(T)
 

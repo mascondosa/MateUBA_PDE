@@ -1,5 +1,5 @@
 import dmsh
-
+import numpy as np
 
 class Triangulation:
     """
@@ -12,24 +12,24 @@ class Triangulation:
         self.neighbors = self.computeNeighbors()
 
     def computeNeighbors(self):
-        Tneighbours = np.zeros([len(self.cells), 3]) - 1
-        for i in range(len(self.cells)):
-            cell = self.cells[i]
-            for j in range(len(self.cells)):
+        Tneighbours = np.zeros([len(self.simplices), 3]) - 1
+        for i in range(len(self.simplices)):
+            cell = self.simplices[i]
+            for j in range(len(self.simplices)):
                 if j != i:
-                    celln = self.cells[j]
+                    celln = self.simplices[j]
                     if cell[0] in celln and cell[1] in celln:
                         Tneighbours[i, 0] = j
                         break
-            for j in range(len(self.cells)):
+            for j in range(len(self.simplices)):
                 if j != i:
-                    celln = self.cells[j]
+                    celln = self.simplices[j]
                     if cell[0] in celln and cell[2] in celln:
                         Tneighbours[i, 1] = j
                         break
-            for j in range(len(self.cells)):
+            for j in range(len(self.simplices)):
                 if j != i:
-                    celln = self.cells[j]
+                    celln = self.simplices[j]
                     if cell[2] in celln and cell[1] in celln:
                         Tneighbours[i, 2] = j
                         break
