@@ -1,6 +1,7 @@
 import dmsh
 import numpy as np
 
+
 class Triangulation:
     """
     Convierte las triangulaciones de dmsh en una clase para poder usarlas con el código
@@ -19,7 +20,7 @@ class Triangulation:
                 if j != i:
                     celln = self.simplices[j]
                     if cell[0] in celln and cell[1] in celln:
-                        Tneighbours[i, 0] = j
+                        Tneighbours[i, 2] = j
                         break
             for j in range(len(self.simplices)):
                 if j != i:
@@ -31,7 +32,7 @@ class Triangulation:
                 if j != i:
                     celln = self.simplices[j]
                     if cell[2] in celln and cell[1] in celln:
-                        Tneighbours[i, 2] = j
+                        Tneighbours[i, 0] = j
                         break
         return Tneighbours
 
