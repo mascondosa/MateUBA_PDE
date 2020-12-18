@@ -6,7 +6,7 @@ layout: default
 
 ### Instalación
 
-Se puede bajar el zip desde aquí.
+Se puede bajar el zip desde [aquí](https://github.com/mascondosa/MateUBA_PDE/archive/main.zip).
 
 ### Cómo contribuir
 
@@ -16,7 +16,7 @@ Luego, ir a la página del proyecto y hacer click en "fork repository". Entonces
 tendremos una copia personal del repositorio bajo nuestro nombre en el servidor
 de Github. Para descargarlo, hacer 
 
-{% highlight %}
+{% highlight console %}
 git clone https://github.com/your.github.username/MateUBA_PDE.git
 {% endhighlight %}
 
@@ -24,14 +24,14 @@ git clone https://github.com/your.github.username/MateUBA_PDE.git
 
 Después de trabajar localmente con el código, cuando querramos subir una copia al servidor, hacer
 
-{% highlight %}
+{% highlight console %}
 git add file1.py file2.py
 {% endhighlight %}
 
 donde file1.py file2.py son los archivos que hemos modificado o añadido. Alternativamente,
 se puede hacer
 
-{% highlight %}
+{% highlight console %}
 git add --all
 {% endhighlight %}
 
@@ -40,13 +40,13 @@ Para añadir todos los archivos del directorio.
 Este comando (add) añade los archivos a la lista de archivos del repositorio. Para prepararnos para subir
 la contribución, hacer
 
-{% highlight %}
+{% highlight console %}
 git commit -m "mensaje"
 {% endhighlight %}
 
 donde "mensaje" incluye un texto con la descripción de los cambios. Finalmente, con
 
-{% highlight %}
+{% highlight console %}
 git push
 {% endhighlight %}
 
