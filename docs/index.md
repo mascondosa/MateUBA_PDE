@@ -16,7 +16,7 @@ Luego, ir a la página del proyecto y hacer click en "fork repository". Entonces
 tendremos una copia personal del repositorio bajo nuestro nombre en el servidor
 de Github. Para descargarlo, hacer 
 
-{% highlight ruby %}
+{% highlight %}
 git clone https://github.com/your.github.username/MateUBA_PDE.git
 {% endhighlight %}
 
@@ -24,14 +24,14 @@ git clone https://github.com/your.github.username/MateUBA_PDE.git
 
 Después de trabajar localmente con el código, cuando querramos subir una copia al servidor, hacer
 
-{% highlight ruby %}
+{% highlight %}
 git add file1.py file2.py
 {% endhighlight %}
 
 donde file1.py file2.py son los archivos que hemos modificado o añadido. Alternativamente,
 se puede hacer
 
-{% highlight ruby %}
+{% highlight %}
 git add --all
 {% endhighlight %}
 
@@ -40,13 +40,13 @@ Para añadir todos los archivos del directorio.
 Este comando (add) añade los archivos a la lista de archivos del repositorio. Para prepararnos para subir
 la contribución, hacer
 
-{% highlight ruby %}
+{% highlight %}
 git commit -m "mensaje"
 {% endhighlight %}
 
 donde "mensaje" incluye un texto con la descripción de los cambios. Finalmente, con
 
-{% highlight ruby %}
+{% highlight %}
 git push
 {% endhighlight %}
 
