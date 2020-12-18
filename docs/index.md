@@ -74,22 +74,26 @@ El código puede hacer lo siguiente:
 ### Interpolación y cuadratura
 
 Tenemos definidas las siguientes bases de Lagrange:
-- En un triángulo
- - Elementos Lineales
-- En un rectángulo
- - Por ahora nada
+* En un triángulo
+    * Elementos Lineales
+* En un rectángulo
+    * Por ahora nada
 
 junto con las cuadraturas:
-- Exactas para P2 en un triángulo
+- Exactas para $$\mathcal{P}_2$$ en un triángulo
 
 ### Formas débiles
 
 El código calcula integrales locales de la forma:
 
-XXX
+$$ \int_T \nabla \phi_i \nabla \phi_j dx $$
 
 y luego las ensambla en una matriz global.
 
+### Condiciones de borde
+
+El código implementa condiciones de borde de Dirichlet homogéneas,
+marcando los nodos de borde y añadiendo la ecuación a la matriz global.
 
 ### Álgebra Lineal
 
