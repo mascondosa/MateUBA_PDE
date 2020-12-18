@@ -2,122 +2,85 @@
 layout: default
 ---
 
-Text can be **bold**, _italic_, or ~~strikethrough~~.
+## Introducción
 
-[Link to another page](./another-page.html).
+### Instalación
 
-There should be whitespace between paragraphs.
+Se puede bajar el zip desde aquí.
 
-There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
+### Cómo contribuir
 
-# Header 1
+Para contribuir código al proyecto, es necesario tener una cuenta de GitHub.
 
-This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
+Luego, ir a la página del proyecto y hacer click en "fork repository". Entonces
+tendremos una copia personal del repositorio bajo nuestro nombre, en el servidor
+de Github. Para descargarlo, hacer 
 
-## Header 2
+git clone
 
-> This is a blockquote following a header.
->
-> When something is important enough, you do it even if the odds are not in your favor.
+Después de trabajar localmente con el código, y queremos subir una copia al servidor, hacer
 
-### Header 3
+git add file1.py file2.py
 
-```js
-// Javascript code with syntax highlighting.
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
-}
-```
+donde file1.py file2.py son los archivos que hemos modificado o añadido. Alternativamente,
+se puede hacer
 
-```ruby
-# Ruby code with syntax highlighting
-GitHubPages::Dependencies.gems.each do |gem, version|
-  s.add_dependency(gem, "= #{version}")
-end
-```
+git add --all
 
-#### Header 4
+Este comando añade los archivos a la lista de archivos del repositorio. Para prepararnos para subir
+la contribución, hacer
 
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
+git commit -m "mensaje"
 
-##### Header 5
+donde "mensaje" incluye un texto con la descripción de los cambios. Finalmente, con
 
-1.  This is an ordered list following a header.
-2.  This is an ordered list following a header.
-3.  This is an ordered list following a header.
+git push
 
-###### Header 6
+se hace la transferencia de datos.
 
-| head1        | head two          | three |
-|:-------------|:------------------|:------|
-| ok           | good swedish fish | nice  |
-| out of stock | good and plenty   | nice  |
-| ok           | good `oreos`      | hmm   |
-| ok           | good `zoute` drop | yumm  |
+Si queremos que nuestros cambios sean incorporados a la versión oficial del proyecto, hay que ir a la
+página de Github del mismo y pedir un "pull request". El administrador así podrá revisar nuestros cambios
+y decidir si los acepta.
 
-### There's a horizontal rule below this.
+## Diferencias Finitas
 
-* * *
+### Matrices de diferencias
 
-### Here is an unordered list:
+### Iteraciones temporales
 
-*   Item foo
-*   Item bar
-*   Item baz
-*   Item zip
-
-### And an ordered list:
-
-1.  Item one
-1.  Item two
-1.  Item three
-1.  Item four
-
-### And a nested list:
-
-- level 1 item
-  - level 2 item
-  - level 2 item
-    - level 3 item
-    - level 3 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-
-### Small image
-
-![Octocat](https://github.githubassets.com/images/icons/emoji/octocat.png)
-
-### Large image
-
-![Branching](https://guides.github.com/activities/hello-world/branching.png)
+### Visualizar una animación
 
 
-### Definition lists can be used with HTML syntax.
+## Elementos Finitos
 
-<dl>
-<dt>Name</dt>
-<dd>Godzilla</dd>
-<dt>Born</dt>
-<dd>1952</dd>
-<dt>Birthplace</dt>
-<dd>Japan</dd>
-<dt>Color</dt>
-<dd>Green</dd>
-</dl>
+### Malladores
 
-```
-Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
-```
+Lo primero en un código de Elementos Finitos es definir una geometría discreta (una malla).
+El código puede hacer lo siguiente: 
+- Definir una nube de puntos y mallar mediante scipy.spatial.Delaunay
+- Definir una geometría y construir una malla mediante dmesh.
+- Encontrar los nodos de borde de una triangulación.
 
-```
-The final element.
-```
+### Interpolación y cuadratura
+
+Tenemos definidas las siguientes bases de Lagrange:
+- En un triángulo
+-- Elementos Lineales
+- En un rectángulo
+-- Por ahora nada
+
+junto con las cuadraturas:
+- Exactas para P2 en un triángulo
+
+### Formas débiles
+
+El código calcula integrales locales de la forma:
+
+XXX
+
+y luego las ensambla en una matriz global.
+
+
+### Álgebra Lineal
+
+Finalmente se resuelve el problema lineal mediante numpy.linalg.solve
