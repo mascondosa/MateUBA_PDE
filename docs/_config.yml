@@ -3,8 +3,9 @@ author:
   name: Martín Maas
   email: martin.d.maas@gmail.com
 description: > # this means to ignore newlines until "show_excerpts:"
-  This code is part of a course in Numerical Analysis of PDEs, 
-  University of Buenos Aires. It is meant for educational purposes.
+  Basic PDE solvers via Finite Differences and Finite Elements,
+  meant for educational purposes. Develped as a part of a course in 
+  Numerical Analysis of PDEs, University of Buenos Aires. 
 
 show_excerpts: false # set to true to show excerpts on the homepage
 
