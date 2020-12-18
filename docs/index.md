@@ -17,10 +17,12 @@ tendremos una copia personal del repositorio bajo nuestro nombre en el servidor
 de Github. Para descargarlo, hacer 
 
 {% highlight ruby %}
-git clone
+git clone https://github.com/your.github.username/MateUBA_PDE.git
 {% endhighlight %}
 
-Después de trabajar localmente con el código, y queremos subir una copia al servidor, hacer
+(modificando your.github.username por el nombre de usuario que hayamos registrado).
+
+Después de trabajar localmente con el código, cuando querramos subir una copia al servidor, hacer
 
 {% highlight ruby %}
 git add file1.py file2.py
@@ -33,7 +35,9 @@ se puede hacer
 git add --all
 {% endhighlight %}
 
-Este comando añade los archivos a la lista de archivos del repositorio. Para prepararnos para subir
+Para añadir todos los archivos del directorio.
+
+Este comando (add) añade los archivos a la lista de archivos del repositorio. Para prepararnos para subir
 la contribución, hacer
 
 {% highlight ruby %}
