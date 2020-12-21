@@ -102,17 +102,11 @@ def matrizTuring(T,Egeom,order,u0,tiempo,dt,d,gamma,f,g):
         aux=np.linalg.solve(M,vector)
         u[:,l+1]=aux[0:n_nodes]
         v[:,l+1]=aux[n_nodes:2*n_nodes]
-    
-    U=np.zeros((n_nodes,Lt))
-    for l in range(0,Lt):
-        p=sum(u[:,l])/n_nodes
-        for q in range(0,n_nodes):
-            U[q,l]=(u[q,l]>p)
-  
+   
     frames = [] 
     fig = plt.figure()
     for n in range(0,Lt):
-        im=plt.tripcolor(T.points[:,0], T.points[:,1],T.simplices, U[:,n].flatten())
+        im=plt.tripcolor(T.points[:,0], T.points[:,1],T.simplices, u[:,n],shading='flat')
         frames.append([im])
 
     ani = animation.ArtistAnimation(fig, frames, interval=100, blit=True,repeat_delay=1000)
