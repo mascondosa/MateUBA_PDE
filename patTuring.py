@@ -28,11 +28,11 @@ def condIniciales(n):
         return g3
     elif (n == 4):
         def g4(x,y):
-            return((x^2)+(y^2)<(1/4))
+            return((x**2)+(y**2)<(1/4))
         return g4
     else:
         def g5(x,y):
-            return((x^2)+(y^2)>(1/3))*((x^2)+(y^2)<(2/3))
+            return((x**2)+(y**2)>(1/3))*((x**2)+(y**2)<(2/3))
         return g5
     
 #Terminos de acople:
