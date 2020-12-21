@@ -60,3 +60,12 @@ def MatricesCBPer2D( Nx,Ny ):
     Dy2[0,-1] = 1 #condiciones periódicas
     Dy2[-1,0] = 1
     return Dx2,Dy2
+
+#Federico
+def MatrizAInvertir_Implicito_RectanguloCB(tamañoX, tamañoY, pasoX, pasoY, dt):
+    Dx2,Dy2 = MatricesCBPer2D( tamañoX,tamañoY )
+    IdentidadX = sc.sparse.identity(tamañoX)
+    IdentidadY = sc.sparse.identity(tamañoY)
+    matAInv = sc.sparse.kron(Dx2, IdentidadY)/(pasoX**2) + sc.sparse.kron(IdentidadX, Dy2)/(pasoY**2)
+    matAInv = dt * matAInv
+    return matAInv
