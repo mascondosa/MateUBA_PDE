@@ -90,7 +90,7 @@ def matrizTuring(T,Egeom,order,u0,tiempo,dt,d,gamma,f,g):
     for ni in range(0,n_nodes):
         ci=condIniciales(u0)
         u[ni,0]=ci(T.points[ni,0],T.points[ni,1]);
-        v[ni,0]=1-u[d,0];
+        v[ni,0]=1-u[ni,0];
     
     #Ciclo temporal
 
