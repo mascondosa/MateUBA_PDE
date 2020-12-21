@@ -115,7 +115,7 @@ def matrizTuring(T,Egeom,order,u0,tiempo,dt,d,gamma,f,g):
         im=plt.tripcolor(T.points[:,0], T.points[:,1],T.simplices, U[:,n].flatten())
         frames.append([im])
 
-    ani = animation.ArtistAnimation(fig, frames, interval=300, blit=True,repeat_delay=1000)
+    ani = animation.ArtistAnimation(fig, frames, interval=100, blit=True,repeat_delay=1000)
     # ani.save('movie.mp4')
     plt.show()
 
@@ -123,4 +123,4 @@ def matrizTuring(T,Egeom,order,u0,tiempo,dt,d,gamma,f,g):
 c = dmsh.Circle([0, 0], 1)
 points, cells = dmsh.generate(c, 0.1)
 T=Triangulation(points, cells)
-matrizTuring(T,'triangular',1,1,1,0.0025,10,200,F,G)
+matrizTuring(T,'triangular',1,3,0.5,0.0001,10,200,F,G)
