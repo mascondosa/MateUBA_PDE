@@ -6,6 +6,7 @@ import dmsh
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.spatial import Delaunay
+from scipy.sparse import csc_matrix, linalg as sla
 import scipy.linalg
 from matplotlib import rcParams
 from matplotlib import animation
@@ -86,23 +87,28 @@ def matrizTuring(T,Egeom,order,u0,tiempo,dt,d,gamma,f,g):
     Lt=len(t)
     u=np.zeros((n_nodes,Lt))
     v=np.zeros((n_nodes,Lt))
-    for d in range(0,n_nodes):
+    for ni in range(0,n_nodes):
         ci=condIniciales(u0)
-        u[d,0]=ci(T.points[d,0],T.points[d,1]);
-        v[d,0]=1-u[d,0];
+        u[ni,0]=ci(T.points[ni,0],T.points[ni,1]);
+        v[ni,0]=1-u[d,0];
     
     #Ciclo temporal
 
     M=scipy.linalg.block_diag(A+dt*B,A+dt*d*B)
+    M=csc_matrix(M)
+    print('LU')
+    M_lu = sla.splu(M)
     vector=np.zeros(2*n_nodes)
     
+    print('iteraciones')
     for l in range(0,Lt-1):
         vector[0:n_nodes]=np.dot(A,u[:,l])+dt*gamma*np.dot(A,f(u[:,l],v[:,l]))
         vector[n_nodes:2*n_nodes]=np.dot(A,v[:,l])+dt*gamma*np.dot(A,g(u[:,l],v[:,l]))
-        aux=np.linalg.solve(M,vector)
+        aux=M_lu.solve(vector)
         u[:,l+1]=aux[0:n_nodes]
         v[:,l+1]=aux[n_nodes:2*n_nodes]
    
+    print('Preparando plot')
     frames = [] 
     fig = plt.figure()
     for n in range(0,Lt):
@@ -114,7 +120,15 @@ def matrizTuring(T,Egeom,order,u0,tiempo,dt,d,gamma,f,g):
     plt.show()
 
 
+print('Dmsh')
 c = dmsh.Circle([0, 0], 1)
-points, cells = dmsh.generate(c, 0.1)
+points, cells = dmsh.generate(c, 0.05)
 T=Triangulation(points, cells)
-matrizTuring(T,'triangular',1,3,0.5,0.0001,10,200,F,G)
+
+Tf = 0.5
+dt = 0.0001
+d = 10
+gamma = 200
+u0 = 3
+print('Llamando solver')
+matrizTuring(T,'triangular',1,u0,Tf,dt,d,gamma,F,G)
