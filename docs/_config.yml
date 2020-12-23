@@ -1,7 +1,4 @@
 title: "MateUBA_PDE"
-author:
-  name: Martín Maas
-  email: martin.d.maas@gmail.com
 description: > # this means to ignore newlines until "show_excerpts:"
   Códigos elementales en python para la resolución de ecuaciones en derivadas
   parciales.
