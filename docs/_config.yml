@@ -1,4 +1,32 @@
 title: "MateUBA_PDE"
-remote_theme: pmarsceill/just-the-docs
-color_scheme: "light"
-search_enabled: false
+author:
+  name: Martín Maas
+  email: martin.d.maas@gmail.com
+description: > # this means to ignore newlines until "show_excerpts:"
+  Códigos elementales en python para la resolución de ecuaciones en derivadas
+  parciales.
+
+show_excerpts: false # set to true to show excerpts on the homepage
+
+# Minima date format
+# refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this
+minima:
+  date_format: "%b %-d, %Y"
+
+# If you want to link only specific pages in your header, uncomment
+# this and add the path to the pages in order as they should show up
+header_pages:
+- blog.md
+- proyectos.md
+- publicaciones.md
+
+markdown: kramdown
+kramdown:
+   math_engine: mathjax
+
+# Build settings
+theme: minima
+
+plugins:
+ - jekyll-feed
+ - jekyll-seo-tag
