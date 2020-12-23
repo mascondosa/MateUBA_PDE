@@ -15,8 +15,8 @@
 # in the templates via {{ site.myvariable }}.
 title: MateUBA_PDE
 description: Códigos elementales para la resolución de Ecuaciones en Derivadas Parciales, escritos con fines educativos, como parte de un curso de Análisis Numérico de la Facultad de Ciencias Exactas y Naturales, Universidad de Buenos Aires
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/MateUBA_PDE" # the subpath of your site, e.g. /blog
+url: "https://mascondosa.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 permalink: pretty
 exclude: ["node_modules/", "*.gemspec", "*.gem", "Gemfile", "Gemfile.lock"]
