@@ -1,5 +1,7 @@
 ---
-layout: default
+title: Introducción
+has_children: false
+nav_order: 1
 ---
 
 ## Introducción
