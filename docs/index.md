@@ -1,13 +1,31 @@
 ---
+layout: default
 title: Home
-layout: home
+nav_order: 1
+usemathjax: true
+description: "Códigos elementales para la resolución de Ecuaciones en Derivadas Parciales, escritos con fines educativos, como parte de un curso de Análisis Numérico de la Facultad de Ciencias Exactas y Naturales, Universidad de Buenos Aires."
+permalink: /
 ---
 
-### Instalación
+# Métodos de Diferencias Finitas y Elementos Finitos
+{: .fs-9 }
 
-Se puede bajar el zip desde [aquí](https://github.com/mascondosa/MateUBA_PDE/archive/main.zip).
+$$ \left\lbrace 
+\begin{array}{cc} 
+\Delta u = f & x\in\Omega \\
+u = 0 & x\in\partial\Omega
+\end{array}
+\right. $$
 
-### Cómo contribuir
+Códigos elementales para la resolución de Ecuaciones en Derivadas Parciales, escritos con fines educativos, como parte de un curso de Análisis Numérico de la Facultad de Ciencias Exactas y Naturales, Universidad de Buenos Aires.
+{: .fs-6 .fw-300 }
+
+[Comenzar](#comenzar){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 } 
+[Ver en GitHub](https://github.com/pmarsceill/just-the-docs){: .btn .fs-5 .mb-4 .mb-md-0 }
+
+---
+
+## Comenzar
 
 Para contribuir código al proyecto, es necesario tener una cuenta de GitHub.
 
