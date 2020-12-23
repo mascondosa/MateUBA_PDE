@@ -1,6 +1,7 @@
 ---
 title: Elementos Finitos
 layout: page
+usemathjax: true
 ---
 
 ## Elementos Finitos
