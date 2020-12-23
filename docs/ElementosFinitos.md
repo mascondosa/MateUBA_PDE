@@ -1,6 +1,6 @@
 ---
 title: Elementos Finitos
-layout: default
+layout: page
 usemathjax: true
 ---
 
