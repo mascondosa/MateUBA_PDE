@@ -1,7 +1,6 @@
 ---
 title: Introducción
-has_children: false
-nav_order: 1
+layout: page
 ---
 
 ## Introducción
