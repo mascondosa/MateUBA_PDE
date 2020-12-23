@@ -99,3 +99,4 @@ marcando los nodos de borde y añadiendo la ecuación a la matriz global.
 ### Álgebra Lineal
 
 Finalmente se resuelve el problema lineal mediante numpy.linalg.solve
+

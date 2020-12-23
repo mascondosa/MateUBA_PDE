@@ -1,21 +1,4 @@
-title: MateUBA PDE
-author:
-  name: Martín Maas
-  email: martin.d.maas@gmail.com
-description: > # this means to ignore newlines until "show_excerpts:"
-  Códigos básicos en python para resolver EDPs mediante Diferencias Finitas 
-  y Elementos Finitos, destinado a fines educativos. Desarrollado como parte 
-  del curso de Análisis Numérico, Facultad de Ciencias Exactas de la 
-  Universidad de Buenos Aires.
-show_excerpts: false # set to true to show excerpts on the homepage
-
-markdown: kramdown
-kramdown:
-   math_engine: mathjax
-
-# Build settings
-theme: jekyll-theme-slate
-
-plugins:
- - jekyll-feed
- - jekyll-seo-tag
+title: "Remote theme example"
+remote_theme: pmarsceill/just-the-docs
+color_scheme: "dark"
+search_enabled: false
